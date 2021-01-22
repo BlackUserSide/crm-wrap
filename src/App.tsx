@@ -1,26 +1,15 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
 
-function App() {
+import "./App.sass";
+import { MainRoutes } from "./routes/MainRouter";
+import { RoutesContext } from "./routes/RoutesContext";
+import { useRoutes } from "./routes/useRoutes";
+export const App: React.FC = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <RoutesContext.Provider value={useRoutes}>
+      <div className="main-app-wrapper">
+        <MainRoutes />
+      </div>
+    </RoutesContext.Provider>
   );
-}
-
-export default App;
+};

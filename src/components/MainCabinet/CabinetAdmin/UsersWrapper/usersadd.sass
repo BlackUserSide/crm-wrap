@@ -1,0 +1,112 @@
+.users-wrapper-admin
+    max-width: 100%
+    padding: 25px 70px
+    .top-line
+        .h1
+            font-size: 32px
+            margin-bottom: 45px
+    .form-add-users
+        display: flex
+        flex-direction: column
+        .input-wrapper
+            display: flex
+            flex-direction: column
+            label
+                display: inline-block
+                margin-bottom: 15px
+                font-size: 20px
+                font-weight: 300
+            input
+                display: inline-block
+                margin-bottom: 15px
+                font-size: 18px
+                border: none
+                border-bottom: 2px solid #000
+                outline: none
+        .btn-wrapper
+            button
+                background: rgb(63,94,251);
+                color: #ffffff
+                border: none
+                padding: 10px 35px
+                border-radius: 5px
+                cursor: pointer
+        .err-form-wrapper
+            opacity: 0
+            margin-bottom: -35px
+            animation: errOut .4s ease-in-out forwards
+        .active-err
+            animation: errIn .4s ease-in-out forwards
+            p
+                color: #8B0000
+        .god-err
+            p
+                color: #32CD32
+    .content-list-wrapper
+        .top-line
+            display: flex
+            max-width: 100%
+            align-items: center
+            justify-content: space-between
+            a
+                color: #ffffff
+                background: rgb(63,94,251);
+                padding: 10px 25px
+                border-radius: 5px
+                text-decoration: none
+        .content-items
+            display: flex
+            flex-direction: column
+            max-width: 100%
+            padding: 35px 0
+            .user-item-wrapper
+                display: flex
+                max-width: 100%
+                justify-content: space-between
+                padding: 15px 25px
+                border: 2px solid #000
+                border-radius: 10px
+                margin-bottom: 25px
+                background-color: #f8f8f8
+                align-items: center
+                .del-btn
+                    background-color: #8B0000
+                    border-radius: 10px
+                    cursor: pointer
+                    padding: 10px 25px
+                    transition: all .3s ease
+                    &:hover
+                        transform: scale(1.05)
+                    span
+                        color: #ffffff
+                        font-weight: 700
+                        display: inline-block
+                        margin-left: 5px
+                        
+                    svg
+                        path
+                            fill: #fff
+                
+                
+
+
+@keyframes errOut
+    0%
+        opacity: 1
+        margin-bottom: 35px
+    50%
+        opacity: 0.5
+    100%
+        opacity: 0
+        margin-bottom: -35px
+
+@keyframes errIn
+    0%
+        opacity: 0
+        margin-bottom: -35px
+    50%
+        opacity: 0.5
+    100%
+        opacity: 1
+        margin-bottom: 35px
+   
