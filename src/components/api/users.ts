@@ -91,3 +91,98 @@ export const deleteUsers = async (id: number) => {
   });
   return response;
 };
+export const getDataCard = async () => {
+  let response = {
+    data: {},
+    status: 0,
+  };
+  await request({
+    method: "GET",
+    url: `/client/get`,
+    validateStatus: () => true,
+  }).then(async (res) => {
+    if (res) {
+      console.log(res);
+
+      switch (res.status) {
+        case 200:
+          response = {
+            ...response,
+            status: res.status,
+            data: res.data,
+          };
+
+          break;
+        case 401:
+          response = {
+            ...response,
+            status: res.status,
+          };
+          break;
+        case 500:
+          response = {
+            ...response,
+            status: res.status,
+          };
+          break;
+        case 400:
+          response = {
+            ...response,
+            status: res.status,
+          };
+          break;
+      }
+    }
+  });
+
+  return response;
+};
+export const changeStatusRes = async (id: number, statusReq: number) => {
+  let response = {
+    data: {},
+    status: 0,
+  };
+  await request({
+    method: "PUT",
+    url: `/client/change_status/${id}`,
+    data: {
+      status: statusReq,
+    },
+    validateStatus: () => true,
+  }).then(async (res) => {
+    if (res) {
+      console.log(res);
+
+      switch (res.status) {
+        case 200:
+          response = {
+            ...response,
+            status: res.status,
+            data: res.data,
+          };
+
+          break;
+        case 401:
+          response = {
+            ...response,
+            status: res.status,
+          };
+          break;
+        case 500:
+          response = {
+            ...response,
+            status: res.status,
+          };
+          break;
+        case 400:
+          response = {
+            ...response,
+            status: res.status,
+          };
+          break;
+      }
+    }
+  });
+
+  return response;
+};

@@ -1,0 +1,84 @@
+.user-content-wrapper
+    .header-user-content
+        padding: 10px
+        background-color: #5F9EA0
+        display: flex
+        flex-direction: row
+        justify-content: space-between
+        align-items: center
+        .nick-name
+            color: #ffffff
+        .log-out
+            button
+                outline: none
+                border: none
+                padding: 10px 25px
+                border-radius: 10px
+                font-weight: bold
+                background: #6A5ACD
+                color: #ffffff
+                cursor: pointer
+                user-select: none
+                transition: .3s ease
+                &:hover
+                    background: rgba(#6A5ACD, .7)
+    .card-client-wrapper
+        max-width: 100%
+        width: 100%
+        .header-card
+            max-width: 100%
+            padding: 35px 70px
+            display: flex
+            justify-content: space-between
+            align-items: center
+            .status-start
+                span
+                    display: flex
+                    align-items: center
+                    padding: 15px 25px
+                    border-radius: 5px
+                    background: #DAA520
+                    color: #ffffff
+                    img
+                        width: 40px
+                        height: 40px
+                        display: inline-block
+                        margin-right: 5px
+            .link-change-status
+                max-width: 60%
+                width: 100%
+                ul
+                    padding: 0
+                    margin: 0
+                    display: flex
+                    align-items: center
+                    list-style-type: none
+                    justify-content: space-evenly
+                    li
+                        button
+                            padding: 10px 15px
+                            border-radius: 8px
+                            border: none
+                            outline: none
+                            color: #ffffff
+                            cursor: pointer
+                            img
+                                width: 20px
+                                height: 20px
+                                display: inline-block
+                                margin-right: 5px
+.green
+    background-color: #32CD32
+    transition: background-color .3s ease
+    &:hover
+        background-color: rgba(#32CD32, .7)
+.yellow
+    background-color: #CD853F
+    transition: background-color .3s ease
+    &:hover
+        background-color: rgba(#CD853F, .7)
+.red
+    background-color: #B22222
+    transition: background-color .3s ease
+    &:hover
+        background-color: rgba(#B22222, .7)

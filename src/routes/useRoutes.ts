@@ -7,6 +7,7 @@ import { RegisterUser } from "../components/MainCabinet/CabinetAdmin/UsersWrappe
 import { UsersWrapper } from "../components/MainCabinet/CabinetAdmin/UsersWrapper/UsersWrapperAdmin";
 import { CabinetWrapper } from "../components/MainCabinet/CabinetWrapper";
 import { UserCabinet } from "../components/MainCabinet/UserCabinet/UserCabinet";
+import { UserContent } from "../components/MainCabinet/UserCabinet/UserCabinetContet/UserContent";
 import { TRoutesWrapper } from "./RoutesContext";
 
 export const useRoutes: TRoutesWrapper = {
@@ -63,5 +64,6 @@ export const useRoutes: TRoutesWrapper = {
         },
       ],
     },
+    { path: "/test", exact: false, component: UserContent, routes: [] },
   ],
 };
